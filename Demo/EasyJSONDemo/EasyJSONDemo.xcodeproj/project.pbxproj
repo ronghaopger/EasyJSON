@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		147E57EA1C770626006299C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E57E91C770626006299C6 /* AppDelegate.swift */; };
+		147E57EC1C770626006299C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E57EB1C770626006299C6 /* ViewController.swift */; };
+		147E57EF1C770626006299C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147E57ED1C770626006299C6 /* Main.storyboard */; };
+		147E57F11C770626006299C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147E57F01C770626006299C6 /* Assets.xcassets */; };
+		147E57F41C770626006299C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147E57F21C770626006299C6 /* LaunchScreen.storyboard */; };
+		147E57FF1C770626006299C6 /* EasyJSONDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E57FE1C770626006299C6 /* EasyJSONDemoTests.swift */; };
+		147E580A1C770626006299C6 /* EasyJSONDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E58091C770626006299C6 /* EasyJSONDemoUITests.swift */; };
+		147E58191C770757006299C6 /* EasyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E58181C770757006299C6 /* EasyJSON.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		147E57FB1C770626006299C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 147E57DE1C770626006299C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 147E57E51C770626006299C6;
+			remoteInfo = EasyJSONDemo;
+		};
+		147E58061C770626006299C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 147E57DE1C770626006299C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 147E57E51C770626006299C6;
+			remoteInfo = EasyJSONDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		147E57E61C770626006299C6 /* EasyJSONDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyJSONDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		147E57E91C770626006299C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		147E57EB1C770626006299C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		147E57EE1C770626006299C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		147E57F01C770626006299C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		147E57F31C770626006299C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		147E57F51C770626006299C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147E57FA1C770626006299C6 /* EasyJSONDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyJSONDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		147E57FE1C770626006299C6 /* EasyJSONDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyJSONDemoTests.swift; sourceTree = "<group>"; };
+		147E58001C770626006299C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147E58051C770626006299C6 /* EasyJSONDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyJSONDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		147E58091C770626006299C6 /* EasyJSONDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyJSONDemoUITests.swift; sourceTree = "<group>"; };
+		147E580B1C770626006299C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147E58181C770757006299C6 /* EasyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyJSON.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		147E57E31C770626006299C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147E57F71C770626006299C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147E58021C770626006299C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		147E57DD1C770626006299C6 = {
+			isa = PBXGroup;
+			children = (
+				147E57E81C770626006299C6 /* EasyJSONDemo */,
+				147E57FD1C770626006299C6 /* EasyJSONDemoTests */,
+				147E58081C770626006299C6 /* EasyJSONDemoUITests */,
+				147E57E71C770626006299C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		147E57E71C770626006299C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				147E57E61C770626006299C6 /* EasyJSONDemo.app */,
+				147E57FA1C770626006299C6 /* EasyJSONDemoTests.xctest */,
+				147E58051C770626006299C6 /* EasyJSONDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		147E57E81C770626006299C6 /* EasyJSONDemo */ = {
+			isa = PBXGroup;
+			children = (
+				147E58171C77071B006299C6 /* EasyJSON */,
+				147E57E91C770626006299C6 /* AppDelegate.swift */,
+				147E57EB1C770626006299C6 /* ViewController.swift */,
+				147E57ED1C770626006299C6 /* Main.storyboard */,
+				147E57F01C770626006299C6 /* Assets.xcassets */,
+				147E57F21C770626006299C6 /* LaunchScreen.storyboard */,
+				147E57F51C770626006299C6 /* Info.plist */,
+			);
+			path = EasyJSONDemo;
+			sourceTree = "<group>";
+		};
+		147E57FD1C770626006299C6 /* EasyJSONDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				147E57FE1C770626006299C6 /* EasyJSONDemoTests.swift */,
+				147E58001C770626006299C6 /* Info.plist */,
+			);
+			path = EasyJSONDemoTests;
+			sourceTree = "<group>";
+		};
+		147E58081C770626006299C6 /* EasyJSONDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				147E58091C770626006299C6 /* EasyJSONDemoUITests.swift */,
+				147E580B1C770626006299C6 /* Info.plist */,
+			);
+			path = EasyJSONDemoUITests;
+			sourceTree = "<group>";
+		};
+		147E58171C77071B006299C6 /* EasyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				147E58181C770757006299C6 /* EasyJSON.swift */,
+			);
+			path = EasyJSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		147E57E51C770626006299C6 /* EasyJSONDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147E580E1C770626006299C6 /* Build configuration list for PBXNativeTarget "EasyJSONDemo" */;
+			buildPhases = (
+				147E57E21C770626006299C6 /* Sources */,
+				147E57E31C770626006299C6 /* Frameworks */,
+				147E57E41C770626006299C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyJSONDemo;
+			productName = EasyJSONDemo;
+			productReference = 147E57E61C770626006299C6 /* EasyJSONDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		147E57F91C770626006299C6 /* EasyJSONDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147E58111C770626006299C6 /* Build configuration list for PBXNativeTarget "EasyJSONDemoTests" */;
+			buildPhases = (
+				147E57F61C770626006299C6 /* Sources */,
+				147E57F71C770626006299C6 /* Frameworks */,
+				147E57F81C770626006299C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				147E57FC1C770626006299C6 /* PBXTargetDependency */,
+			);
+			name = EasyJSONDemoTests;
+			productName = EasyJSONDemoTests;
+			productReference = 147E57FA1C770626006299C6 /* EasyJSONDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		147E58041C770626006299C6 /* EasyJSONDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147E58141C770626006299C6 /* Build configuration list for PBXNativeTarget "EasyJSONDemoUITests" */;
+			buildPhases = (
+				147E58011C770626006299C6 /* Sources */,
+				147E58021C770626006299C6 /* Frameworks */,
+				147E58031C770626006299C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				147E58071C770626006299C6 /* PBXTargetDependency */,
+			);
+			name = EasyJSONDemoUITests;
+			productName = EasyJSONDemoUITests;
+			productReference = 147E58051C770626006299C6 /* EasyJSONDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		147E57DE1C770626006299C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "荣浩";
+				TargetAttributes = {
+					147E57E51C770626006299C6 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					147E57F91C770626006299C6 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 147E57E51C770626006299C6;
+					};
+					147E58041C770626006299C6 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 147E57E51C770626006299C6;
+					};
+				};
+			};
+			buildConfigurationList = 147E57E11C770626006299C6 /* Build configuration list for PBXProject "EasyJSONDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 147E57DD1C770626006299C6;
+			productRefGroup = 147E57E71C770626006299C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				147E57E51C770626006299C6 /* EasyJSONDemo */,
+				147E57F91C770626006299C6 /* EasyJSONDemoTests */,
+				147E58041C770626006299C6 /* EasyJSONDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		147E57E41C770626006299C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147E57F41C770626006299C6 /* LaunchScreen.storyboard in Resources */,
+				147E57F11C770626006299C6 /* Assets.xcassets in Resources */,
+				147E57EF1C770626006299C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147E57F81C770626006299C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147E58031C770626006299C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		147E57E21C770626006299C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147E58191C770757006299C6 /* EasyJSON.swift in Sources */,
+				147E57EC1C770626006299C6 /* ViewController.swift in Sources */,
+				147E57EA1C770626006299C6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147E57F61C770626006299C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147E57FF1C770626006299C6 /* EasyJSONDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		147E58011C770626006299C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147E580A1C770626006299C6 /* EasyJSONDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		147E57FC1C770626006299C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 147E57E51C770626006299C6 /* EasyJSONDemo */;
+			targetProxy = 147E57FB1C770626006299C6 /* PBXContainerItemProxy */;
+		};
+		147E58071C770626006299C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 147E57E51C770626006299C6 /* EasyJSONDemo */;
+			targetProxy = 147E58061C770626006299C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		147E57ED1C770626006299C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				147E57EE1C770626006299C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		147E57F21C770626006299C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				147E57F31C770626006299C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		147E580C1C770626006299C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		147E580D1C770626006299C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		147E580F1C770626006299C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EasyJSONDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rh.EasyJSONDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		147E58101C770626006299C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EasyJSONDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rh.EasyJSONDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		147E58121C770626006299C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EasyJSONDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rh.EasyJSONDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyJSONDemo.app/EasyJSONDemo";
+			};
+			name = Debug;
+		};
+		147E58131C770626006299C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EasyJSONDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rh.EasyJSONDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyJSONDemo.app/EasyJSONDemo";
+			};
+			name = Release;
+		};
+		147E58151C770626006299C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EasyJSONDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rh.EasyJSONDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EasyJSONDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		147E58161C770626006299C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EasyJSONDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rh.EasyJSONDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EasyJSONDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		147E57E11C770626006299C6 /* Build configuration list for PBXProject "EasyJSONDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147E580C1C770626006299C6 /* Debug */,
+				147E580D1C770626006299C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		147E580E1C770626006299C6 /* Build configuration list for PBXNativeTarget "EasyJSONDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147E580F1C770626006299C6 /* Debug */,
+				147E58101C770626006299C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		147E58111C770626006299C6 /* Build configuration list for PBXNativeTarget "EasyJSONDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147E58121C770626006299C6 /* Debug */,
+				147E58131C770626006299C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		147E58141C770626006299C6 /* Build configuration list for PBXNativeTarget "EasyJSONDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147E58151C770626006299C6 /* Debug */,
+				147E58161C770626006299C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 147E57DE1C770626006299C6 /* Project object */;
+}
