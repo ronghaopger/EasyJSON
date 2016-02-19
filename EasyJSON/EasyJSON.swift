@@ -82,7 +82,17 @@ extension Modelable where Self: NSObject {
                     self.setValue(json.string, forKey: orignKey)
                 }
                 else {
-                    self.setValue(json[key!].string, forKey: orignKey)
+                    let value = json[key!]
+                    if (value.type == .Null) {
+                        continue
+                    }
+                    else if (value.type == .Number) {
+                        //Swift不支持Int,Float...的KVC
+                        continue
+                    }
+                    else {
+                        self.setValue(value.string, forKey: orignKey)
+                    }
                 }
             }
         }
