@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
         let test = testModel()
         test.createModel(["test1":1, "test2":"2", "test33":"3", "test4":["11","12","13"], "test5":["name":"RH"]])
+        NSLog("%@", test.test1!)
         NSLog("%@", test.test4![0].age!)
         NSLog("%@", test.test5!.name!)
         
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
 
 
 public class testModel: NSObject {
-    public var test1: Int?
+    public var test1: NSNumber?   //Int, Float, Double ---> NSNumber
     public var test2: String?
     public var test3: String?
     public var test4: [arrayModel]?

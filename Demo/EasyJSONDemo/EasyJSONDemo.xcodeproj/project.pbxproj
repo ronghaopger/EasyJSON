@@ -15,6 +15,7 @@
 		147E57FF1C770626006299C6 /* EasyJSONDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E57FE1C770626006299C6 /* EasyJSONDemoTests.swift */; };
 		147E580A1C770626006299C6 /* EasyJSONDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E58091C770626006299C6 /* EasyJSONDemoUITests.swift */; };
 		147E58191C770757006299C6 /* EasyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E58181C770757006299C6 /* EasyJSON.swift */; };
+		147E581B1C772054006299C6 /* Reflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E581A1C772054006299C6 /* Reflect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		147E58091C770626006299C6 /* EasyJSONDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyJSONDemoUITests.swift; sourceTree = "<group>"; };
 		147E580B1C770626006299C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		147E58181C770757006299C6 /* EasyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyJSON.swift; sourceTree = "<group>"; };
+		147E581A1C772054006299C6 /* Reflect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reflect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		147E58171C77071B006299C6 /* EasyJSON */ = {
 			isa = PBXGroup;
 			children = (
+				147E581A1C772054006299C6 /* Reflect.swift */,
 				147E58181C770757006299C6 /* EasyJSON.swift */,
 			);
 			path = EasyJSON;
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				147E58191C770757006299C6 /* EasyJSON.swift in Sources */,
+				147E581B1C772054006299C6 /* Reflect.swift in Sources */,
 				147E57EC1C770626006299C6 /* ViewController.swift in Sources */,
 				147E57EA1C770626006299C6 /* AppDelegate.swift in Sources */,
 			);

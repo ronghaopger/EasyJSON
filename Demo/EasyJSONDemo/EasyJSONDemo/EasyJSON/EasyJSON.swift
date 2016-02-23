@@ -87,8 +87,8 @@ extension Modelable where Self: NSObject {
                         continue
                     }
                     else if (value.type == .Number) {
-                        //Swift不支持Int,Float...的KVC
-                        continue
+                        //setValue不支持Int,Float,Double
+                        self.setValue(value.numberValue, forKey: orignKey)
                     }
                     else {
                        self.setValue(value.string, forKey: orignKey)
