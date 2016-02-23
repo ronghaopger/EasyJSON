@@ -10,7 +10,12 @@
 		14BACE781C463D91005D37FF /* EasyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 14BACE771C463D91005D37FF /* EasyJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14BACE7F1C463D91005D37FF /* EasyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BACE741C463D91005D37FF /* EasyJSON.framework */; };
 		14BACE841C463D91005D37FF /* EasyJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BACE831C463D91005D37FF /* EasyJSONTests.swift */; };
-		14BACE901C463E0E005D37FF /* EasyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BACE8F1C463E0E005D37FF /* EasyJSON.swift */; };
+		14CC0B1D1C7CAEEC0031E610 /* Easyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B1A1C7CAEEC0031E610 /* Easyable.swift */; };
+		14CC0B1E1C7CAEEC0031E610 /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B1B1C7CAEEC0031E610 /* JSONable.swift */; };
+		14CC0B1F1C7CAEEC0031E610 /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B1C1C7CAEEC0031E610 /* Modelable.swift */; };
+		14CC0B221C7CAEF50031E610 /* EasyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B201C7CAEF50031E610 /* EasyProperty.swift */; };
+		14CC0B231C7CAEF50031E610 /* EasySelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B211C7CAEF50031E610 /* EasySelf.swift */; };
+		14CC0B251C7CAF030031E610 /* EasyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B241C7CAF030031E610 /* EasyJSON.swift */; };
 		5D6A99D1984C2848D329B146 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03857445F604BE36F6D209A /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +36,12 @@
 		14BACE7E1C463D91005D37FF /* EasyJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BACE831C463D91005D37FF /* EasyJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyJSONTests.swift; sourceTree = "<group>"; };
 		14BACE851C463D91005D37FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14BACE8F1C463E0E005D37FF /* EasyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyJSON.swift; sourceTree = "<group>"; };
+		14CC0B1A1C7CAEEC0031E610 /* Easyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easyable.swift; sourceTree = "<group>"; };
+		14CC0B1B1C7CAEEC0031E610 /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONable.swift; sourceTree = "<group>"; };
+		14CC0B1C1C7CAEEC0031E610 /* Modelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
+		14CC0B201C7CAEF50031E610 /* EasyProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyProperty.swift; sourceTree = "<group>"; };
+		14CC0B211C7CAEF50031E610 /* EasySelf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasySelf.swift; sourceTree = "<group>"; };
+		14CC0B241C7CAF030031E610 /* EasyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyJSON.swift; sourceTree = "<group>"; };
 		49B87C88CC6E17BF1E72BBEA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		81793E025457764FBA13A16D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E03857445F604BE36F6D209A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				14BACE771C463D91005D37FF /* EasyJSON.h */,
-				14BACE8F1C463E0E005D37FF /* EasyJSON.swift */,
+				14CC0B241C7CAF030031E610 /* EasyJSON.swift */,
+				14CC0B191C7CAEBD0031E610 /* Protocols */,
+				14CC0B181C7CAEB10031E610 /* Classes */,
 				14BACE791C463D91005D37FF /* Info.plist */,
 			);
 			path = EasyJSON;
@@ -94,6 +106,25 @@
 				14BACE851C463D91005D37FF /* Info.plist */,
 			);
 			path = EasyJSONTests;
+			sourceTree = "<group>";
+		};
+		14CC0B181C7CAEB10031E610 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				14CC0B201C7CAEF50031E610 /* EasyProperty.swift */,
+				14CC0B211C7CAEF50031E610 /* EasySelf.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		14CC0B191C7CAEBD0031E610 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				14CC0B1A1C7CAEEC0031E610 /* Easyable.swift */,
+				14CC0B1B1C7CAEEC0031E610 /* JSONable.swift */,
+				14CC0B1C1C7CAEEC0031E610 /* Modelable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		21300B45A67D0FB207C862EC /* Pods */ = {
@@ -256,7 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BACE901C463E0E005D37FF /* EasyJSON.swift in Sources */,
+				14CC0B221C7CAEF50031E610 /* EasyProperty.swift in Sources */,
+				14CC0B1D1C7CAEEC0031E610 /* Easyable.swift in Sources */,
+				14CC0B231C7CAEF50031E610 /* EasySelf.swift in Sources */,
+				14CC0B251C7CAF030031E610 /* EasyJSON.swift in Sources */,
+				14CC0B1F1C7CAEEC0031E610 /* Modelable.swift in Sources */,
+				14CC0B1E1C7CAEEC0031E610 /* JSONable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

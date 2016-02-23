@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
 }
 
 
@@ -44,6 +46,10 @@ public class testModel: NSObject {
     public override func arrayElementToModel() -> [String: String]? {
         return ["test4":"arrayModel"]
     }
+    
+    override   public func dictionaryToModel() -> [String: String]? {
+        return ["test5":"dictionaryModel"]
+    }
 }
 
 public class dictionaryModel:NSObject {
@@ -51,8 +57,5 @@ public class dictionaryModel:NSObject {
 }
 
 public class arrayModel:NSObject {
-    required override public init() {
-        super.init()
-    }
     public var age: String?
 }

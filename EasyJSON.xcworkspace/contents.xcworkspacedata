@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Demo_SwiftRT/Demo_SwiftRT.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Demo/EasyJSONDemo/EasyJSONDemo.xcodeproj">
    </FileRef>
    <FileRef
