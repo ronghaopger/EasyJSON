@@ -11,7 +11,6 @@
 		1456546B1C7C107C009F8349 /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145654681C7C107C009F8349 /* JSONable.swift */; };
 		1456546C1C7C107C009F8349 /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145654691C7C107C009F8349 /* Modelable.swift */; };
 		145654711C7C26F0009F8349 /* EasySelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145654701C7C26F0009F8349 /* EasySelf.swift */; };
-		145654731C7C2716009F8349 /* EasyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145654721C7C2716009F8349 /* EasyProperty.swift */; };
 		147E57EA1C770626006299C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E57E91C770626006299C6 /* AppDelegate.swift */; };
 		147E57EC1C770626006299C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E57EB1C770626006299C6 /* ViewController.swift */; };
 		147E57EF1C770626006299C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147E57ED1C770626006299C6 /* Main.storyboard */; };
@@ -44,7 +43,6 @@
 		145654681C7C107C009F8349 /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONable.swift; sourceTree = "<group>"; };
 		145654691C7C107C009F8349 /* Modelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
 		145654701C7C26F0009F8349 /* EasySelf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasySelf.swift; sourceTree = "<group>"; };
-		145654721C7C2716009F8349 /* EasyProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyProperty.swift; sourceTree = "<group>"; };
 		147E57E61C770626006299C6 /* EasyJSONDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyJSONDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147E57E91C770626006299C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147E57EB1C770626006299C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				145654701C7C26F0009F8349 /* EasySelf.swift */,
-				145654721C7C2716009F8349 /* EasyProperty.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				1456546C1C7C107C009F8349 /* Modelable.swift in Sources */,
 				147E58191C770757006299C6 /* EasyJSON.swift in Sources */,
 				147E57EC1C770626006299C6 /* ViewController.swift in Sources */,
-				145654731C7C2716009F8349 /* EasyProperty.swift in Sources */,
 				147E57EA1C770626006299C6 /* AppDelegate.swift in Sources */,
 				1456546A1C7C107C009F8349 /* Easyable.swift in Sources */,
 			);

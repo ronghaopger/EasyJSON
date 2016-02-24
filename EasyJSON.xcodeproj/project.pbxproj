@@ -13,7 +13,6 @@
 		14CC0B1D1C7CAEEC0031E610 /* Easyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B1A1C7CAEEC0031E610 /* Easyable.swift */; };
 		14CC0B1E1C7CAEEC0031E610 /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B1B1C7CAEEC0031E610 /* JSONable.swift */; };
 		14CC0B1F1C7CAEEC0031E610 /* Modelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B1C1C7CAEEC0031E610 /* Modelable.swift */; };
-		14CC0B221C7CAEF50031E610 /* EasyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B201C7CAEF50031E610 /* EasyProperty.swift */; };
 		14CC0B231C7CAEF50031E610 /* EasySelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B211C7CAEF50031E610 /* EasySelf.swift */; };
 		14CC0B251C7CAF030031E610 /* EasyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B241C7CAF030031E610 /* EasyJSON.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +37,6 @@
 		14CC0B1A1C7CAEEC0031E610 /* Easyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easyable.swift; sourceTree = "<group>"; };
 		14CC0B1B1C7CAEEC0031E610 /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONable.swift; sourceTree = "<group>"; };
 		14CC0B1C1C7CAEEC0031E610 /* Modelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modelable.swift; sourceTree = "<group>"; };
-		14CC0B201C7CAEF50031E610 /* EasyProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyProperty.swift; sourceTree = "<group>"; };
 		14CC0B211C7CAEF50031E610 /* EasySelf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasySelf.swift; sourceTree = "<group>"; };
 		14CC0B241C7CAF030031E610 /* EasyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +102,6 @@
 		14CC0B181C7CAEB10031E610 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				14CC0B201C7CAEF50031E610 /* EasyProperty.swift */,
 				14CC0B211C7CAEF50031E610 /* EasySelf.swift */,
 			);
 			path = Classes;
@@ -228,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14CC0B221C7CAEF50031E610 /* EasyProperty.swift in Sources */,
 				14CC0B1D1C7CAEEC0031E610 /* Easyable.swift in Sources */,
 				14CC0B231C7CAEF50031E610 /* EasySelf.swift in Sources */,
 				14CC0B251C7CAF030031E610 /* EasyJSON.swift in Sources */,

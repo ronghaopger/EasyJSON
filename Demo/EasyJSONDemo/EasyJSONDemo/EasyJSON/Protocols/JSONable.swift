@@ -14,13 +14,13 @@ public protocol JSONable {
 
 extension JSONable where Self: NSObject {
     public func toJSON() -> String? {
-        do {
-            let data = try NSJSONSerialization.dataWithJSONObject(self, options: .PrettyPrinted)
-            return String(data: data, encoding: NSUTF8StringEncoding)
-        }
-        catch {
-            debugPrint("error")
-        }
-        return nil
+//        do {
+//            let data = try NSJSONSerialization.dataWithJSONObject(self, options: .PrettyPrinted)
+//            return String(data: data, encoding: NSUTF8StringEncoding)
+//        }
+//        catch {
+//            debugPrint("error")
+//        }
+        return ""
     }
 }

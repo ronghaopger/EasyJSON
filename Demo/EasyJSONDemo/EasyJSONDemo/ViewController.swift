@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         NSLog("%@", test.test4![0].age!)
         NSLog("%@", test.test5!.name!)
         
+//        NSLog("%@", test.toJSON()!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +30,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-
 
 
 public class testModel: NSObject {
@@ -48,13 +48,10 @@ public class testModel: NSObject {
     }
 }
 
-public class dictionaryModel:NSObject {
+public class dictionaryModel: NSObject {
     public var name: String?
 }
 
-public class arrayModel:NSObject {
-    required override public init() {
-        super.init()
-    }
+public class arrayModel: NSObject {
     public var age: String?
 }

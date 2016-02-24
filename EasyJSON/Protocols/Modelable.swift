@@ -25,6 +25,7 @@ extension Modelable where Self: NSObject {
         }
         catch let error as NSError {
             NSLog("%@", error.code)
+            return
         }
         self.createModel(jsonObject!)
     }
@@ -58,34 +59,39 @@ extension Modelable where Self: NSObject {
                 let value = jsonObj[key!] as? NSNumber
                 self.setValue(value, forKey: orignKey!)
             case .SelfDefining(let name):
-                let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + (name as String)) as? NSObject.Type
-                let obj = cls!.init()
                 let value = jsonObj as! [String:AnyObject]
+                let obj = self.createObj(name as String)
                 obj.createModel(value[key!]!)
                 self.setValue(obj, forKey: orignKey!)
             case .Array:
-                let arrayDic = self.arrayElementToModel()
-                if (arrayDic != nil
-                    && arrayDic?.keys.contains(orignKey!) == true) {
-                        let type = arrayDic![orignKey!]
-                        if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + type!) as? NSObject.Type {
-                            let value = jsonObj as! [String:AnyObject]
-                            let subJsonArray = value[key!] as! [AnyObject]
-                            var subModelArray = [NSObject]()
-                            for var i = 0; i < subJsonArray.count; i++ {
-                                let obj = cls.init()
-                                obj.createModel(subJsonArray[i])
-                                subModelArray.append(obj)
-                            }
-                            self.setValue(subModelArray, forKey: orignKey!)
-                        } else {
-                            debugPrint("setup replace object class with error name!");
-                        }
+                let typeName = self.getElementType(orignKey!)
+                let value = jsonObj as! [String:AnyObject]
+                let subJsonArray = value[key!] as! [AnyObject]
+                var subModelArray = [NSObject]()
+                for var i = 0; i < subJsonArray.count; i++ {
+                    let obj = self.createObj(typeName)
+                    obj.createModel(subJsonArray[i])
+                    subModelArray.append(obj)
                 }
-                
+                self.setValue(subModelArray, forKey: orignKey!)
             default:
                 break
             }
         }
+    }
+    
+// MARK: private method
+    private func createObj(typeName:String) ->NSObject {
+        let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + typeName) as? NSObject.Type
+        let obj = cls!.init()
+        return obj
+    }
+    
+    private func getElementType(key:String) ->String {
+        let arrayDic = self.arrayElementToModel()
+        if (arrayDic != nil && arrayDic?.keys.contains(key) == true) {
+            return arrayDic![key]!
+        }
+        return ""
     }
 }
