@@ -5,4 +5,5 @@ The better way for JSON to Model in Swift
 1、Model中的 Int, Float, Double 一律用 NSNumber代替。
 
 //TODO:
-1、自定义JSON，顺带解决嵌套时各类型的赋值问题。
+1、自定义JSON
+2、toJSON

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 荣浩. All rights reserved.
 //
 
-import SwiftyJSON
+import Foundation
 
 extension NSObject: Easyable {
     

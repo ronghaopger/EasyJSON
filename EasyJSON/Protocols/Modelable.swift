@@ -7,18 +7,30 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 
 public protocol Modelable {
-    func createModel(json: JSON)
+    func createModel(jsonStr:String)
+    func createModel(jsonObj: AnyObject)
     
     func specialMapping() -> [String: String]?
     func arrayElementToModel() -> [String: String]?
 }
 
 extension Modelable where Self: NSObject {
-    public func createModel(json: JSON) {
+    public func createModel(jsonStr:String) {
+        var jsonObject: AnyObject?
+        do {
+            jsonObject = try NSJSONSerialization.JSONObjectWithData((jsonStr.dataUsingEncoding(NSUTF8StringEncoding))!, options: .AllowFragments)
+        }
+        catch let error as NSError {
+            NSLog("%@", error.code)
+        }
+        self.createModel(jsonObject!)
+    }
+    
+    
+    public func createModel(jsonObj: AnyObject) {
         //special mapping
         let mappingDic = self.specialMapping()
         //analyze self
@@ -35,20 +47,21 @@ extension Modelable where Self: NSObject {
             
             switch property!.type {
             case .String:
-                if json.type == Type.String {
-                    self.setValue(json.string, forKey: orignKey!)
+                if let value = jsonObj as? String {
+                    self.setValue(value, forKey: orignKey!)
                 }
-                else if json.type == Type.Dictionary {
-                    self.setValue(json[key!].string, forKey: orignKey!)
+                else if let value = jsonObj as? [String:AnyObject] {
+                    self.setValue(value[key!], forKey: orignKey!)
                 }
             case .Number:
                 //setValue不支持Int,Float,Double
-                let value = json[key!]
-                self.setValue(value.numberValue, forKey: orignKey!)
+                let value = jsonObj[key!] as? NSNumber
+                self.setValue(value, forKey: orignKey!)
             case .SelfDefining(let name):
                 let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + (name as String)) as? NSObject.Type
                 let obj = cls!.init()
-                obj.createModel(json[key!])
+                let value = jsonObj as! [String:AnyObject]
+                obj.createModel(value[key!]!)
                 self.setValue(obj, forKey: orignKey!)
             case .Array:
                 let arrayDic = self.arrayElementToModel()
@@ -56,7 +69,8 @@ extension Modelable where Self: NSObject {
                     && arrayDic?.keys.contains(orignKey!) == true) {
                         let type = arrayDic![orignKey!]
                         if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + type!) as? NSObject.Type {
-                            let subJsonArray = json[key!]
+                            let value = jsonObj as! [String:AnyObject]
+                            let subJsonArray = value[key!] as! [AnyObject]
                             var subModelArray = [NSObject]()
                             for var i = 0; i < subJsonArray.count; i++ {
                                 let obj = cls.init()

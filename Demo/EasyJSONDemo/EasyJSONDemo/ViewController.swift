@@ -15,7 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let test = testModel()
-        test.createModel(["test1":1, "test2":"2", "test33":"3", "test4":["11","12","13"], "test5":["name":"RH"]])
+//        test.createModel(["test1":1, "test2":"2", "test33":"3", "test4":["11","12","13"], "test5":["name":"RH"]])
+        test.createModel("{\"test1\":1,\"test2\":\"2\",\"test33\":\"3\",\"test4\":[\"11\",\"12\",\"13\"],\"test5\":{\"name\":\"RH\"}}")
         NSLog("%@", test.test1!)
         NSLog("%@", test.test3!)
         NSLog("%@", test.test4![0].age!)
