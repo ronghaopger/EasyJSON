@@ -50,14 +50,29 @@ class EasyProperty: NSObject {
                     type = .Array
                 }
                 else if item.containsString("T@") {
-                    //T@"_TtC12EasyJSONDemo10arrayModel"
-                    //TODO:用正则处理上述字符串
-                    type = .SelfDefining("dictionaryModel")
+                    type = .SelfDefining(self.getModelName(item))
                 }
             }
             else if item.containsString("V") {
                 name = item.stringByReplacingOccurrencesOfString("V", withString: "")
             }
         }
+    }
+    private func getModelName(item:String) ->String {
+        //T@"_TtC12EasyJSONDemo10arrayModel"
+        //                    let str = "T@\"_TtC12EasyJSONDemo10arrayModel\""
+        var regex: NSRegularExpression?
+        do {
+            regex = try NSRegularExpression(pattern: "[A-z.]+[0-9.]+", options: .CaseInsensitive)
+        }
+        catch let error as NSError {
+            NSLog("正则异常：%@", error.code)
+            return ""
+        }
+        let result = regex!.matchesInString(item, options: .ReportCompletion, range: NSMakeRange(0, item.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)))
+        let range = result[result.count-1].range
+        let startIndex = item.startIndex.advancedBy(range.location+range.length)
+        //                    NSLog("%@",item.substringFromIndex(startIndex))
+        return item.substringFromIndex(startIndex).stringByReplacingOccurrencesOfString("\"", withString: "")
     }
 }

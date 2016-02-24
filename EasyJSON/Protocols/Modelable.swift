@@ -15,13 +15,13 @@ public protocol Modelable {
     
     func specialMapping() -> [String: String]?
     func arrayElementToModel() -> [String: String]?
-    func dictionaryToModel() -> [String: String]?
 }
 
 extension Modelable where Self: NSObject {
     public func createModel(json: JSON) {
         //special mapping
         let mappingDic = self.specialMapping()
+        //analyze self
         let easySelf = EasySelf(obj: self)
         for var i = 0; i < easySelf.propertyCount; i++ {
             let property = easySelf[i]
@@ -39,7 +39,7 @@ extension Modelable where Self: NSObject {
                     self.setValue(json.string, forKey: orignKey!)
                 }
                 else if json.type == Type.Dictionary {
-                    self.setValue(json[orignKey!].string, forKey: orignKey!)
+                    self.setValue(json[key!].string, forKey: orignKey!)
                 }
             case .Number:
                 //setValue不支持Int,Float,Double

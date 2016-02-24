@@ -17,8 +17,4 @@ extension NSObject: Easyable {
     public func arrayElementToModel() -> [String: String]? {
         return nil
     }
-    
-    public func dictionaryToModel() -> [String: String]? {
-        return nil
-    }
 }
