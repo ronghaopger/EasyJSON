@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1462FAB01C7D86B800A7C19D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462FAAF1C7D86B800A7C19D /* SwiftyJSON.swift */; };
+		1465D2581DE2D6D700A2AE60 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465D2571DE2D6D700A2AE60 /* SwiftyJSON.swift */; };
 		14CC0B331C7CB0570031E610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B321C7CB0570031E610 /* AppDelegate.swift */; };
 		14CC0B351C7CB0570031E610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC0B341C7CB0570031E610 /* ViewController.swift */; };
 		14CC0B381C7CB0570031E610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CC0B361C7CB0570031E610 /* Main.storyboard */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1462FAAF1C7D86B800A7C19D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		1465D2571DE2D6D700A2AE60 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		14CC0B2F1C7CB0570031E610 /* Demo_SwiftRT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_SwiftRT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CC0B321C7CB0570031E610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14CC0B341C7CB0570031E610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		14CC0B441C7CB0BD0031E610 /* EasyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				1462FAAF1C7D86B800A7C19D /* SwiftyJSON.swift */,
+				1465D2571DE2D6D700A2AE60 /* SwiftyJSON.swift */,
 				14CC0B451C7CB0CF0031E610 /* EasyJSON.swift */,
 			);
 			path = EasyJSON;
@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					14CC0B2E1C7CB0570031E610 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -152,7 +153,7 @@
 				14CC0B461C7CB0CF0031E610 /* EasyJSON.swift in Sources */,
 				14CC0B351C7CB0570031E610 /* ViewController.swift in Sources */,
 				14CC0B331C7CB0570031E610 /* AppDelegate.swift in Sources */,
-				1462FAB01C7D86B800A7C19D /* SwiftyJSON.swift in Sources */,
+				1465D2581DE2D6D700A2AE60 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +268,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Demo-SwiftRT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -278,6 +280,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Demo-SwiftRT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

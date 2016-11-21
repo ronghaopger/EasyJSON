@@ -15,8 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let test = testModel()
-//        test.createModel(["test1":1, "test2":"2", "test33":"3", "test4":["11","12","13"], "test5":["name":"RH"]])
-        test.createModel("{\"test1\":1,\"test2\":\"2\",\"test33\":\"3\",\"test4\":[\"11\",\"12\",\"13\"],\"test5\":{\"name\":\"RH\"}}")
+//        test.createModel(with: ["test1":1, "test2":"2", "test33":"3", "test4":["11","12","13"], "test5":["name":"RH"]])
+        test.createModel(with: "{\"test1\":1,\"test2\":\"2\",\"test33\":\"3\",\"test4\":[\"11\",\"12\",\"13\"],\"test5\":{\"name\":\"RH\"}}")
         NSLog("%@", test.test1!)
         NSLog("%@", test.test3!)
         NSLog("%@", test.test4![0].age!)
@@ -32,26 +32,26 @@ class ViewController: UIViewController {
 }
 
 
-public class testModel: NSObject {
-    public var test1: NSNumber?   //Int, Float, Double ---> NSNumber
-    public var test2: String?
-    public var test3: String?
-    public var test4: [arrayModel]?
-    public var test5: dictionaryModel?
+open class testModel: NSObject {
+    open var test1: NSNumber?   //Int, Float, Double ---> NSNumber
+    open var test2: String?
+    open var test3: String?
+    open var test4: [arrayModel]?
+    open var test5: dictionaryModel?
     
-    public override func specialMapping() -> [String: String]? {
+    open override func specialMapping() -> [String: String]? {
         return ["test3":"test33"]
     }
     
-    public override func arrayElementToModel() -> [String: String]? {
+    open override func arrayElementToModel() -> [String: String]? {
         return ["test4":"arrayModel"]
     }
 }
 
-public class dictionaryModel: NSObject {
-    public var name: String?
+open class dictionaryModel: NSObject {
+    open var name: String?
 }
 
-public class arrayModel: NSObject {
-    public var age: String?
+open class arrayModel: NSObject {
+    open var age: String?
 }

@@ -27,7 +27,7 @@ public protocol Easyable: Modelable, JSONable {
 }
 
 public protocol Modelable {
-    func createModel(json: JSON)
+    func createModel(with json: JSON)
     
     func specialMapping() -> [String: String]?
     func arrayElementToModel() -> [String: String]?
@@ -35,27 +35,25 @@ public protocol Modelable {
 }
 
 extension Modelable where Self: NSObject {
-    public func createModel(json: JSON) {
+    public func createModel(with json: JSON) {
         let mappingDic = self.specialMapping()
         let modelDic = self.dictionaryToModel()
         let arrayDic = self.arrayElementToModel()
         let mirror = Mirror(reflecting: self)
         for item in mirror.children {
             let orignKey = item.label!
-            var key: String?
+            var key: String = orignKey
             if (mappingDic != nil
-                && mappingDic?.keys.contains(orignKey) == true) {
+                && mappingDic!.keys.contains(orignKey) == true) {
                     key = mappingDic![orignKey]!
             }
-            else {
-                key = orignKey
-            }
+
             if (modelDic != nil
-                && modelDic?.keys.contains(orignKey) == true) {
+                && modelDic!.keys.contains(orignKey) == true) {
                     let type = modelDic![orignKey]!
-                    if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + type) as? NSObject.Type {
+                    if let cls = NSClassFromString((Bundle.main.object(forInfoDictionaryKey: "CFBundleName")! as AnyObject).description + "." + type) as? NSObject.Type {
                         let obj = cls.init()
-                        obj.createModel(json[key!])
+                        obj.createModel(with: json[key])
                         self.setValue(obj, forKey: orignKey)
                     } else {
                         debugPrint("setup replace object class with error name!");
@@ -64,12 +62,12 @@ extension Modelable where Self: NSObject {
             else if (arrayDic != nil
                 && arrayDic?.keys.contains(orignKey) == true) {
                     let type = arrayDic![orignKey]!
-                    if let cls = NSClassFromString(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description + "." + type) as? NSObject.Type {
-                        let subJsonArray = json[key!]
+                    if let cls = NSClassFromString((Bundle.main.object(forInfoDictionaryKey: "CFBundleName")! as AnyObject).description + "." + type) as? NSObject.Type {
+                        let subJsonArray = json[key]
                         var subModelArray = [NSObject]()
-                        for var i = 0; i < subJsonArray.count; i++ {
+                        for i in 0..<subJsonArray.count {
                             let obj = cls.init()
-                            obj.createModel(subJsonArray[i])
+                            obj.createModel(with: subJsonArray[i])
                             subModelArray.append(obj)
                         }
                         self.setValue(subModelArray, forKey: orignKey)
@@ -78,15 +76,15 @@ extension Modelable where Self: NSObject {
                     }
             }
             else {
-                if (json.type == .String) {
+                if (json.type == .string) {
                     self.setValue(json.string, forKey: orignKey)
                 }
                 else {
-                    let value = json[key!]
-                    if (value.type == .Null) {
+                    let value = json[key]
+                    if (value.type == .null) {
                         continue
                     }
-                    else if (value.type == .Number) {
+                    else if (value.type == .number) {
                         //setValue不支持Int,Float,Double
                         self.setValue(value.numberValue, forKey: orignKey)
                     }
@@ -107,8 +105,8 @@ public protocol JSONable {
 extension JSONable where Self: NSObject {
     public func toJSON() -> String? {
         do {
-            let data = try NSJSONSerialization.dataWithJSONObject(self, options: .PrettyPrinted)
-            return String(data: data, encoding: NSUTF8StringEncoding)
+            let data = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            return String(data: data, encoding: String.Encoding.utf8)
         }
         catch {
             debugPrint("error")

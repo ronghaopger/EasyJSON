@@ -9,13 +9,13 @@
 import Foundation
 // MARK: Type
 public enum EasyType {
-    case Number
-    case String
-    case Bool
-    case Array
-    case Dictionary
-    case Null
-    case SelfDefining(NSString)
+    case number
+    case string
+    case bool
+    case array
+    case dictionary
+    case null
+    case selfDefining(String)
 }
 
 // MARK: - EasySelf
@@ -23,7 +23,7 @@ class EasySelf: NSObject {
     // MARK: - constant and veriable and property
     private var propertyArray = [EasyProperty]()
     
-    var propertyCount: Int? {
+    var PropertyCount: Int {
         get {
             return propertyArray.count
         }
@@ -46,14 +46,14 @@ class EasySelf: NSObject {
     
     
 // MARK: - private method
-    private func analyzeSelf(type: AnyClass) {
+    private func analyzeSelf(_ type: AnyClass) {
         var propertyCount = UInt32()
         let properties = class_copyPropertyList(type, &propertyCount);
-        for var propertyIndex: UInt32 = 0; propertyIndex < propertyCount; propertyIndex++ {
-            let attributes = property_getAttributes(properties[Int(propertyIndex)])
-            let propertyAttributes = String.fromCString(attributes)
+        for propertyIndex: UInt32 in 0 ..< propertyCount {
+            let attributes = property_getAttributes(properties?[Int(propertyIndex)])
+            let propertyAttributes = String(cString: attributes!)
             //            NSLog("%@", propertyAttributes!)
-            let propertyType = EasyProperty(attributesStr: propertyAttributes!)
+            let propertyType = EasyProperty(attributesStr: propertyAttributes)
             propertyArray.append(propertyType)
         }
     }
@@ -63,7 +63,7 @@ class EasySelf: NSObject {
 class EasyProperty: NSObject {
     // MARK: - constant and veriable and property
     var name:String = ""
-    var type:EasyType = .Null
+    var type:EasyType = .null
     
     // MARK: - life cycle
     init(attributesStr: String) {
@@ -72,42 +72,42 @@ class EasyProperty: NSObject {
     }
     
     // MARK: - private method
-    private func analyzeAttributes(attributesStr: String) {
-        let attributeItems = attributesStr.componentsSeparatedByString(",")
-        for var index = 0; index < attributeItems.count; index++ {
+    private func analyzeAttributes(_ attributesStr: String) {
+        let attributeItems = attributesStr.components(separatedBy: ",")
+        for index in 0 ..< attributeItems.count {
             let item = attributeItems[index]
-            if item.containsString("T") {
-                if item.containsString("NSNumber") {
-                    type = .Number
+            if item.contains("T") {
+                if item.contains("NSNumber") {
+                    type = .number
                 }
-                else if item.containsString("NSString") {
-                    type = .String
+                else if item.contains("NSString") {
+                    type = .string
                 }
-                else if item.containsString("NSArray") {
-                    type = .Array
+                else if item.contains("NSArray") {
+                    type = .array
                 }
-                else if item.containsString("T@") {
-                    type = .SelfDefining(self.getModelName(item))
+                else if item.contains("T@") {
+                    type = .selfDefining(self.getModelName(item))
                 }
             }
-            else if item.containsString("V") {
-                name = item.stringByReplacingOccurrencesOfString("V", withString: "")
+            else if item.contains("V") {
+                name = item.replacingOccurrences(of: "V", with: "")
             }
         }
     }
-    private func getModelName(item:String) ->String {
+    private func getModelName(_ item:String) ->String {
         //T@"_TtC12EasyJSONDemo10arrayModel"
         var regex: NSRegularExpression?
         do {
-            regex = try NSRegularExpression(pattern: "[A-z.]+[0-9.]+", options: .CaseInsensitive)
+            regex = try NSRegularExpression(pattern: "[A-z.]+[0-9.]+", options: .caseInsensitive)
         }
         catch let error as NSError {
             NSLog("正则异常：%@", error.code)
             return ""
         }
-        let result = regex!.matchesInString(item, options: .ReportCompletion, range: NSMakeRange(0, item.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)))
+        let result = regex!.matches(in: item, options: .reportCompletion, range: NSMakeRange(0, item.lengthOfBytes(using: String.Encoding.utf8)))
         let range = result[result.count-1].range
-        let startIndex = item.startIndex.advancedBy(range.location+range.length)
-        return item.substringFromIndex(startIndex).stringByReplacingOccurrencesOfString("\"", withString: "")
+        let startIndex = item.characters.index(item.startIndex, offsetBy: range.location+range.length)
+        return item.substring(from: startIndex).replacingOccurrences(of: "\"", with: "")
     }
 }
